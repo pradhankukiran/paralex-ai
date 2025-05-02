@@ -199,6 +199,47 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-slate-900">What Our Clients Say</h2>
+            <p className="mt-4 text-lg text-slate-600">
+              Hear from legal professionals who transformed their practice with ParalexAI
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                quote: "ParalexAI has revolutionized how we handle contract analysis. It cut down review time by 60% and improved accuracy significantly. A game-changer for our practice.",
+                name: "Sarah Chen",
+                firm: "Chen & Associates LLP"
+              },
+              {
+                quote: "The legal research module is incredibly powerful. Finding relevant case law used to take hours, now it's minutes. ParalexAI is an indispensable tool for our litigation team.",
+                name: "David Rodriguez",
+                firm: "Rodriguez Legal Group"
+              },
+              {
+                quote: "Implementing ParalexAI for compliance monitoring gave us peace of mind. The real-time updates and automated checks ensure we're always ahead of regulatory changes.",
+                name: "Emily Carter",
+                firm: "Carter & Shaw Law Firm"
+              }
+            ].map((testimonial, index) => (
+              <div key={index} className="p-6 rounded-xl border border-slate-200 bg-slate-50 flex flex-col">
+                <p className="text-slate-600 italic mb-4 flex-grow">
+                  "{testimonial.quote}"
+                </p>
+                <div className="mt-auto pt-4 border-t border-slate-200">
+                  <p className="font-semibold text-slate-900">{testimonial.name}</p>
+                  <p className="text-sm text-slate-500">{testimonial.firm}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-slate-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
